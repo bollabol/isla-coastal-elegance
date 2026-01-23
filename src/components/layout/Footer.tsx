@@ -6,7 +6,6 @@ const footerLinks = {
     { name: "Facade Cladding", href: "/materials" },
     { name: "Terrace Decking", href: "/materials" },
     { name: "Louvre Systems", href: "/materials" },
-    { name: "Fencing & Gates", href: "/materials" },
   ],
   company: [
     { name: "About", href: "/about" },
