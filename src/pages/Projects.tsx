@@ -9,6 +9,8 @@ import deckingTeak from "@/assets/decking-teak.jpg";
 import deckingSand from "@/assets/decking-sand.jpg";
 import deckingGrey from "@/assets/decking-grey.jpg";
 import deckingBrown from "@/assets/decking-brown.jpg";
+import claddingBlack from "@/assets/cladding-black.jpg";
+import claddingLightTeak from "@/assets/cladding-light-teak.jpg";
 
 const projects = [
   {
@@ -97,6 +99,28 @@ const projects = [
     description:
       "Warm garden terrace featuring rich brown composite decking surrounded by tropical plants and mature trees.",
     image: deckingBrown,
+    year: "2024",
+  },
+  {
+    id: 9,
+    title: "Villa Noir",
+    location: "Côte d'Azur, France",
+    category: "Private Residence",
+    application: "Black Cladding",
+    description:
+      "Dramatic contemporary villa featuring bold black composite cladding, creating a striking contrast against the Mediterranean coastline.",
+    image: claddingBlack,
+    year: "2024",
+  },
+  {
+    id: 10,
+    title: "Casa Serena",
+    location: "Formentera, Spain",
+    category: "Private Residence",
+    application: "Light Teak Cladding",
+    description:
+      "Elegant Balearic villa with warm honey-blonde composite cladding, harmonizing with the natural stone and olive groves.",
+    image: claddingLightTeak,
     year: "2024",
   },
 ];
