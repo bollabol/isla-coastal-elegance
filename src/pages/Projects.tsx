@@ -11,17 +11,6 @@ import deckingGrey from "@/assets/decking-grey.jpg";
 import deckingBrown from "@/assets/decking-brown.jpg";
 import claddingBlack from "@/assets/cladding-black.jpg";
 import claddingLightTeak from "@/assets/cladding-light-teak.jpg";
-// New villa images
-import villaTeakSunset from "@/assets/villa-teak-sunset.jpg";
-import villaWalnutSunset from "@/assets/villa-walnut-sunset.jpg";
-import villaOakSunset from "@/assets/villa-oak-sunset.jpg";
-import villaBlackSunset from "@/assets/villa-black-sunset.jpg";
-import villaCharcoalSunset from "@/assets/villa-charcoal-sunset.jpg";
-import villaTeakIbiza from "@/assets/villa-teak-ibiza.jpg";
-import villaWalnutMykonos from "@/assets/villa-walnut-mykonos.jpg";
-import villaOakDubai from "@/assets/villa-oak-dubai.jpg";
-import villaBlackMallorca from "@/assets/villa-black-mallorca.jpg";
-import villaCharcoalCoastal from "@/assets/villa-charcoal-coastal.jpg";
 
 const projects = [
   {
@@ -70,116 +59,6 @@ const projects = [
   },
   {
     id: 5,
-    title: "Villa Sol",
-    location: "Mediterranean Coast",
-    category: "Private Residence",
-    application: "Teak Cladding",
-    description:
-      "Clifftop residence with warm golden teak composite cladding, natural stone elements and infinity pool overlooking the Mediterranean.",
-    image: villaTeakSunset,
-    year: "2025",
-  },
-  {
-    id: 6,
-    title: "Casa Walnut",
-    location: "Tropical Resort",
-    category: "Private Residence",
-    application: "Walnut Cladding",
-    description:
-      "Contemporary tropical villa featuring deep walnut composite cladding with floating deck extending over the infinity pool.",
-    image: villaWalnutSunset,
-    year: "2025",
-  },
-  {
-    id: 7,
-    title: "Villa Lumière",
-    location: "Coastal Paradise",
-    category: "Private Residence",
-    application: "Oak Cladding",
-    description:
-      "Multi-level coastal residence with natural oak composite cladding, travertine stone base and lush tropical landscaping.",
-    image: villaOakSunset,
-    year: "2025",
-  },
-  {
-    id: 8,
-    title: "Maison Noire",
-    location: "Clifftop Estate",
-    category: "Private Residence",
-    application: "Black Cladding",
-    description:
-      "Bold contemporary villa with striking matte black composite cladding, cantilevered over the ocean with dramatic dark infinity pool.",
-    image: villaBlackSunset,
-    year: "2025",
-  },
-  {
-    id: 9,
-    title: "Villa Anthracite",
-    location: "Mediterranean Hills",
-    category: "Private Residence",
-    application: "Charcoal Cladding",
-    description:
-      "Sophisticated hillside villa with charcoal grey composite cladding, natural stone accents and panoramic sea views.",
-    image: villaCharcoalSunset,
-    year: "2025",
-  },
-  {
-    id: 10,
-    title: "Casa Ibiza",
-    location: "Ibiza, Spain",
-    category: "Private Residence",
-    application: "Teak Cladding",
-    description:
-      "Iconic Ibiza-style villa with warm teak composite cladding, white stucco walls, rooftop infinity pool and Mediterranean sea views.",
-    image: villaTeakIbiza,
-    year: "2025",
-  },
-  {
-    id: 11,
-    title: "Villa Mykonos",
-    location: "Mykonos, Greece",
-    category: "Private Residence",
-    application: "Walnut Cladding",
-    description:
-      "Elegant Cycladic-modern fusion with rich walnut composite cladding, traditional white architecture and Aegean Sea panorama.",
-    image: villaWalnutMykonos,
-    year: "2025",
-  },
-  {
-    id: 12,
-    title: "Palm Dunes Estate",
-    location: "Dubai, UAE",
-    category: "Private Residence",
-    application: "Oak Cladding",
-    description:
-      "Ultra-modern beachfront mansion with light oak composite cladding, desert palms and golden desert-meets-ocean views.",
-    image: villaOakDubai,
-    year: "2025",
-  },
-  {
-    id: 13,
-    title: "Serra Tramuntana",
-    location: "Mallorca, Spain",
-    category: "Private Residence",
-    application: "Black Cladding",
-    description:
-      "Dramatic cliff-edge villa with bold black composite cladding, ancient olive trees and cascading infinity pool over the Mediterranean.",
-    image: villaBlackMallorca,
-    year: "2025",
-  },
-  {
-    id: 14,
-    title: "Oceanfront Pavilion",
-    location: "Tropical Coast",
-    category: "Private Residence",
-    application: "Charcoal Cladding",
-    description:
-      "Contemporary beachfront residence with sleek charcoal grey composite cladding, floating terrace extending over the turquoise waters.",
-    image: villaCharcoalCoastal,
-    year: "2025",
-  },
-  {
-    id: 15,
     title: "Mediterranean Terrace",
     location: "Ibiza, Spain",
     category: "Private Residence",
@@ -190,7 +69,7 @@ const projects = [
     year: "2024",
   },
   {
-    id: 16,
+    id: 6,
     title: "Coastal Retreat",
     location: "Mallorca, Spain",
     category: "Private Residence",
@@ -201,7 +80,7 @@ const projects = [
     year: "2024",
   },
   {
-    id: 17,
+    id: 7,
     title: "Urban Rooftop",
     location: "Barcelona, Spain",
     category: "Private Residence",
@@ -212,7 +91,7 @@ const projects = [
     year: "2024",
   },
   {
-    id: 18,
+    id: 8,
     title: "Garden Oasis",
     location: "Marbella, Spain",
     category: "Private Residence",
@@ -223,7 +102,7 @@ const projects = [
     year: "2024",
   },
   {
-    id: 19,
+    id: 9,
     title: "Villa Noir",
     location: "Côte d'Azur, France",
     category: "Private Residence",
@@ -234,7 +113,7 @@ const projects = [
     year: "2024",
   },
   {
-    id: 20,
+    id: 10,
     title: "Casa Serena",
     location: "Formentera, Spain",
     category: "Private Residence",
