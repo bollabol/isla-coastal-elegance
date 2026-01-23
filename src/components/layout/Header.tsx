@@ -5,10 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
   { name: "Materials", href: "/materials" },
-  { name: "Applications", href: "/projects" },
   { name: "Projects", href: "/projects" },
   { name: "Sample Collection", href: "/samples" },
-  { name: "About Isla", href: "/about" },
+  { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -46,7 +45,7 @@ export const Header = () => {
             <span className={`font-serif text-xl md:text-2xl font-light tracking-tight transition-colors duration-300 ${
               !isScrolled && isHomePage ? "text-white" : "text-foreground"
             }`}>
-              Isla
+              Isla Wood Composite
             </span>
           </Link>
 

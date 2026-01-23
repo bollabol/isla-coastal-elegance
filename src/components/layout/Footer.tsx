@@ -5,11 +5,11 @@ const footerLinks = {
   materials: [
     { name: "Facade Cladding", href: "/materials" },
     { name: "Terrace Decking", href: "/materials" },
-    { name: "Pool Surrounds", href: "/materials" },
-    { name: "Outdoor Elements", href: "/materials" },
+    { name: "Louvre Systems", href: "/materials" },
+    { name: "Fencing & Gates", href: "/materials" },
   ],
   company: [
-    { name: "About Isla", href: "/about" },
+    { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Sample Collection", href: "/samples" },
     { name: "Contact & Partnerships", href: "/contact" },
