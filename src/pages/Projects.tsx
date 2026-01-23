@@ -1,54 +1,54 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import projectTerrace from "@/assets/project-terrace.jpg";
-import projectFacade from "@/assets/project-facade.jpg";
-import projectPool from "@/assets/project-pool.jpg";
-import heroVilla from "@/assets/hero-villa.jpg";
+import villaTeakTerrace from "@/assets/villa-teak-terrace.jpg";
+import villaTeakEvening from "@/assets/villa-teak-evening.jpg";
+import villaTeakPool from "@/assets/villa-teak-pool.jpg";
+import villaTeakFacade from "@/assets/villa-teak-facade.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Villa Serena",
-    location: "Ibiza, Spain",
+    title: "Villa Horizon",
+    location: "Curaçao, Caribbean",
     category: "Private Residence",
     application: "Facade & Terrace",
     description:
-      "A contemporary villa where our composite cladding and decking define the architectural language of indoor-outdoor living.",
-    image: projectTerrace,
+      "Stunning ocean-view terrace where our teak composite decking creates seamless indoor-outdoor transitions at golden hour.",
+    image: villaTeakTerrace,
     year: "2024",
   },
   {
     id: 2,
-    title: "The Olive House",
-    location: "Mallorca, Spain",
+    title: "Casa del Mar",
+    location: "Bonaire, Caribbean",
     category: "Private Residence",
     application: "Exterior Cladding",
     description:
-      "Modern facade system transforming this Mediterranean estate into an architectural landmark of restrained elegance.",
-    image: projectFacade,
+      "Modern Caribbean architecture featuring our premium teak cladding, designed to withstand tropical conditions while aging gracefully.",
+    image: villaTeakFacade,
     year: "2024",
   },
   {
     id: 3,
-    title: "Azure Resort",
-    location: "Mykonos, Greece",
-    category: "Hospitality",
-    application: "Pool Surrounds",
-    description:
-      "Luxury resort pool deck designed for high traffic while maintaining the premium aesthetic expected by discerning guests.",
-    image: projectPool,
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "Palm Residence",
-    location: "Dubai, UAE",
+    title: "Sunset Villa",
+    location: "Aruba, Caribbean",
     category: "Private Residence",
     application: "Complete Exterior",
     description:
-      "Waterfront property featuring comprehensive composite cladding and decking throughout all outdoor spaces.",
-    image: heroVilla,
+      "Evening ambiance enhanced by warm composite cladding that captures the Caribbean sunset in every grain.",
+    image: villaTeakEvening,
+    year: "2024",
+  },
+  {
+    id: 4,
+    title: "Coral Bay Resort",
+    location: "St. Maarten, Caribbean",
+    category: "Hospitality",
+    application: "Pool Surrounds",
+    description:
+      "Luxury poolside retreat featuring slip-resistant composite decking surrounded by tropical bougainvillea.",
+    image: villaTeakPool,
     year: "2023",
   },
 ];
