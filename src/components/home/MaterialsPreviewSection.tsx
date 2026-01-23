@@ -114,7 +114,7 @@ export const MaterialsPreviewSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-warm p-8 mb-10"
             >
-              <h3 className="font-serif text-xl mb-6">Maatwerk & Custom Solutions</h3>
+              <h3 className="font-serif text-xl mb-6">Bespoke & Custom Solutions</h3>
               <div className="grid grid-cols-3 gap-6">
                 {customFeatures.map((feature, index) => (
                   <div key={feature.title} className="text-center">
