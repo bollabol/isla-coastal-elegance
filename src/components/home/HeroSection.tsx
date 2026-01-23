@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-villa.jpg";
+import heroImage from "@/assets/villa-teak-facade.jpg";
 
 export const HeroSection = () => {
   return (
