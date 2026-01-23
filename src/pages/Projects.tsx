@@ -153,10 +153,21 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed mb-6"
           >
             A selection of residential and hospitality projects where our materials 
             contribute to architecture of lasting significance.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-base font-light text-muted-foreground/80 max-w-2xl leading-relaxed"
+          >
+            Every project showcases how Isla Wood Composite materials perform in real-world 
+            coastal and island environments—from Mediterranean terraces to Caribbean villas. 
+            These collaborations with architects and developers demonstrate the lasting beauty 
+            and resilience of our surfaces across diverse climates and architectural styles.
           </motion.p>
         </div>
       </section>
