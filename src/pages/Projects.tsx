@@ -5,6 +5,10 @@ import villaTeakTerrace from "@/assets/villa-teak-terrace.jpg";
 import villaTeakEvening from "@/assets/villa-teak-evening.jpg";
 import villaTeakPool from "@/assets/villa-teak-pool.jpg";
 import villaTeakFacade from "@/assets/villa-teak-facade.jpg";
+import deckingTeak from "@/assets/decking-teak.jpg";
+import deckingSand from "@/assets/decking-sand.jpg";
+import deckingGrey from "@/assets/decking-grey.jpg";
+import deckingBrown from "@/assets/decking-brown.jpg";
 
 const projects = [
   {
@@ -50,6 +54,50 @@ const projects = [
       "Luxury poolside retreat featuring slip-resistant composite decking surrounded by tropical bougainvillea.",
     image: villaTeakPool,
     year: "2023",
+  },
+  {
+    id: 5,
+    title: "Mediterranean Terrace",
+    location: "Ibiza, Spain",
+    category: "Private Residence",
+    application: "Teak Decking",
+    description:
+      "Elegant Mediterranean terrace with warm teak composite decking, olive trees and lavender gardens overlooking the sea.",
+    image: deckingTeak,
+    year: "2024",
+  },
+  {
+    id: 6,
+    title: "Coastal Retreat",
+    location: "Mallorca, Spain",
+    category: "Private Residence",
+    application: "Sand Decking",
+    description:
+      "Minimalist coastal villa featuring light sand-colored composite decking with panoramic ocean views.",
+    image: deckingSand,
+    year: "2024",
+  },
+  {
+    id: 7,
+    title: "Urban Rooftop",
+    location: "Barcelona, Spain",
+    category: "Private Residence",
+    application: "Grey Decking",
+    description:
+      "Contemporary rooftop terrace with sophisticated grey composite decking and modern architectural elements.",
+    image: deckingGrey,
+    year: "2024",
+  },
+  {
+    id: 8,
+    title: "Garden Oasis",
+    location: "Marbella, Spain",
+    category: "Private Residence",
+    application: "Brown Decking",
+    description:
+      "Warm garden terrace featuring rich brown composite decking surrounded by tropical plants and mature trees.",
+    image: deckingBrown,
+    year: "2024",
   },
 ];
 
