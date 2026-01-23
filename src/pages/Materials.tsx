@@ -6,133 +6,143 @@ import textureDecking from "@/assets/texture-decking.jpg";
 import projectFacade from "@/assets/project-facade.jpg";
 import projectPool from "@/assets/project-pool.jpg";
 
-const materials = [
+const applications = [
   {
-    id: "cladding",
-    name: "Composite Cladding",
+    id: "facades",
+    name: "Facade Systems",
+    subtitle: "Exterior Cladding",
     description:
-      "Transform facades with our premium composite cladding system. Designed for architectural excellence, our cladding combines natural wood aesthetics with superior durability.",
+      "Architectural cladding that defines building character. Our facade systems offer precise profiles and consistent grain patterns that meet the standards of discerning architects.",
     features: [
-      "Available in multiple profiles",
-      "UV-stable coloring",
-      "Hidden fastening system",
-      "Fire-retardant options",
+      "Multiple profile configurations",
+      "UV-stable coloring technology",
+      "Hidden fastening systems",
+      "Fire-retardant specifications",
     ],
     image: projectFacade,
   },
   {
-    id: "decking",
-    name: "Composite Decking",
+    id: "terraces",
+    name: "Terrace Surfaces",
+    subtitle: "Decking Solutions",
     description:
-      "Create stunning outdoor spaces with our composite decking range. Engineered for comfort underfoot and built to withstand years of use in coastal environments.",
+      "Surfaces engineered for barefoot comfort and decades of performance. Our terrace decking withstands the demands of coastal living without compromising on aesthetics.",
     features: [
-      "Slip-resistant surface",
+      "Slip-resistant texture",
       "Cool-touch technology",
       "Hollow and solid core options",
-      "Multiple color options",
+      "Integrated drainage design",
     ],
     image: textureDecking,
   },
   {
-    id: "outdoor",
-    name: "Outdoor Solutions",
+    id: "pools",
+    name: "Pool Surrounds",
+    subtitle: "Aquatic Environments",
     description:
-      "Complete your project with our range of outdoor solutions including pergolas, screens, and custom applications tailored to your architectural vision.",
+      "Specialized surfaces for pool decks and water features. Resistant to chlorine, salt water, and intensive UV exposure while remaining comfortable underfoot.",
     features: [
-      "Custom profiles available",
-      "Integrated lighting options",
-      "Modular design system",
-      "Weather-resistant hardware",
+      "Chlorine and salt resistant",
+      "Cool underfoot in direct sun",
+      "Anti-slip wet surface rating",
+      "Rapid drainage capability",
     ],
     image: projectPool,
   },
 ];
 
-const colors = [
-  { name: "Natural Oak", hex: "#C4A77D" },
-  { name: "Teak", hex: "#B08968" },
-  { name: "Charcoal", hex: "#4A4A4A" },
-  { name: "Stone Grey", hex: "#8B8B8B" },
-  { name: "Walnut", hex: "#5D4E37" },
-  { name: "Sand", hex: "#D4C4A8" },
+const finishes = [
+  { name: "Natural Oak", color: "#C4A77D" },
+  { name: "Warm Teak", color: "#B08968" },
+  { name: "Charcoal", color: "#4A4A4A" },
+  { name: "Stone Grey", color: "#8B8B8B" },
+  { name: "Dark Walnut", color: "#5D4E37" },
+  { name: "Sand", color: "#D4C4A8" },
 ];
 
 const Materials = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-secondary">
+      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-secondary">
         <div className="container-wide">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="label-uppercase mb-4"
+            className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
           >
-            Our Materials
+            Materials
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-display max-w-3xl mb-6"
+            className="font-serif text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] max-w-4xl mb-8"
           >
-            Premium composites for exceptional spaces
+            Surfaces engineered
+            <br />
+            <span className="italic">for coastal life</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-large max-w-2xl"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
           >
-            Explore our range of wood composite materials, engineered for
-            performance and designed for beauty.
+            Our composite materials combine the warmth of natural timber with 
+            engineering that understands the demands of island and coastal architecture.
           </motion.p>
         </div>
       </section>
 
-      {/* Materials Grid */}
-      <section className="section-padding">
+      {/* Applications */}
+      <section className="py-28 md:py-40">
         <div className="container-wide">
-          <div className="space-y-24">
-            {materials.map((material, index) => (
+          <div className="space-y-32 md:space-y-40">
+            {applications.map((app, index) => (
               <motion.div
-                key={material.id}
+                key={app.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <h2 className="heading-subsection mb-4">{material.name}</h2>
-                  <p className="body-large mb-8">{material.description}</p>
-                  <ul className="space-y-3 mb-8">
-                    {material.features.map((feature) => (
+                  <p className="text-xs font-light tracking-[0.3em] uppercase text-accent mb-4">
+                    {app.subtitle}
+                  </p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight mb-6">
+                    {app.name}
+                  </h2>
+                  <p className="text-muted-foreground font-light leading-relaxed mb-10">
+                    {app.description}
+                  </p>
+                  <ul className="space-y-4 mb-10">
+                    {app.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-3 text-sm font-light"
+                        className="flex items-center gap-4 text-sm font-light"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <span className="w-8 h-px bg-accent" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/samples"
-                    className="btn-secondary inline-flex items-center gap-2"
+                    className="inline-flex items-center gap-3 text-sm font-light text-foreground hover:text-accent transition-colors group"
                   >
-                    Request Samples
-                    <ArrowRight className="w-4 h-4" />
+                    Request samples
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                   <img
-                    src={material.image}
-                    alt={material.name}
-                    className="w-full aspect-[4/3] object-cover"
+                    src={app.image}
+                    alt={app.name}
+                    className="w-full aspect-[4/5] object-cover"
                   />
                 </div>
               </motion.div>
@@ -141,27 +151,27 @@ const Materials = () => {
         </div>
       </section>
 
-      {/* Color Options */}
-      <section className="section-padding bg-secondary">
+      {/* Finishes */}
+      <section className="py-28 md:py-40 bg-secondary">
         <div className="container-wide">
-          <div className="text-center mb-12">
+          <div className="max-w-xl mb-16">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="label-uppercase mb-4"
+              className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
             >
-              Color Collection
+              Finish Collection
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-section"
+              className="font-serif text-3xl md:text-4xl font-light tracking-tight"
             >
-              Inspired by nature
+              Colours drawn from nature
             </motion.h2>
           </div>
 
@@ -170,15 +180,15 @@ const Materials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
           >
-            {colors.map((color) => (
-              <div key={color.name} className="text-center">
+            {finishes.map((finish) => (
+              <div key={finish.name} className="group cursor-pointer">
                 <div
-                  className="aspect-square mb-4 border border-border/50"
-                  style={{ backgroundColor: color.hex }}
+                  className="aspect-[3/4] mb-4 transition-transform duration-300 group-hover:scale-[1.02]"
+                  style={{ backgroundColor: finish.color }}
                 />
-                <p className="text-sm font-light">{color.name}</p>
+                <p className="text-sm font-light">{finish.name}</p>
               </div>
             ))}
           </motion.div>
@@ -188,13 +198,13 @@ const Materials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center mt-12"
+            className="mt-16"
           >
             <Link
               to="/samples"
-              className="btn-primary inline-flex items-center gap-2"
+              className="bg-primary text-primary-foreground px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-primary/90 transition-all duration-300 inline-flex items-center justify-center gap-3"
             >
-              Order Sample Kit
+              Request Sample Collection
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

@@ -5,68 +5,68 @@ import heroImage from "@/assets/hero-villa.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-end pb-20 md:pb-32">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxury villa with wood composite cladding"
+          alt="Architectural facade with premium composite cladding"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
       </div>
 
       {/* Content */}
-      <div className="relative container-wide pt-24">
-        <div className="max-w-3xl">
+      <div className="relative container-wide">
+        <div className="max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="label-uppercase text-white/70 mb-6"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xs font-light tracking-[0.3em] uppercase text-white/60 mb-8"
           >
-            Premium Wood Composite
+            Premium Composite Surfaces
           </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="heading-display text-white mb-8"
+            transition={{ duration: 1, delay: 0.3 }}
+            className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[1.05] tracking-tight mb-8"
           >
-            Luxury wood composite
+            Designed for islands.
             <br />
-            <span className="italic">solutions for island architecture</span>
+            <span className="italic text-white/90">Built to last.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="body-large text-white/80 mb-10 max-w-xl"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg md:text-xl font-light text-white/70 mb-12 max-w-xl leading-relaxed"
           >
-            Engineered for coastal environments. Designed for architects and
-            developers who demand premium aesthetics and lasting performance.
+            Premium composite surfaces for architects and developers 
+            creating enduring coastal architecture.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link
               to="/samples"
-              className="btn-accent inline-flex items-center justify-center gap-2"
+              className="bg-white text-primary px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-white/90 transition-all duration-300 inline-flex items-center justify-center gap-3"
             >
               Request Samples
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               to="/contact"
-              className="bg-transparent border border-white/50 text-white px-8 py-4 text-sm font-medium tracking-wide uppercase hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center"
+              className="bg-transparent border border-white/40 text-white px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Get a Quote
+              Start a Project
             </Link>
           </motion.div>
         </div>
@@ -76,10 +76,13 @@ export const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
       >
-        <div className="w-px h-16 bg-gradient-to-b from-white/50 to-transparent" />
+        <div className="flex flex-col items-center gap-3">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">Scroll</span>
+          <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
+        </div>
       </motion.div>
     </section>
   );
