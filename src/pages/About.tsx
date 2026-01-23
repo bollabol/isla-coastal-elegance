@@ -4,26 +4,30 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import projectTerrace from "@/assets/project-terrace.jpg";
 
-const values = [
+const principles = [
   {
-    title: "Quality First",
+    number: "01",
+    title: "Uncompromising Quality",
     description:
-      "We source and supply only the highest quality composite materials, rigorously tested for performance in demanding coastal environments.",
+      "We source exclusively from manufacturers who meet our rigorous performance standards for coastal environments.",
   },
   {
-    title: "Architectural Focus",
+    number: "02",
+    title: "Architectural Partnership",
     description:
-      "Our products are designed with architects and designers in mind, offering the aesthetic flexibility to realize bold creative visions.",
+      "We collaborate with architects and designers who share our commitment to materials that honour their creative vision.",
   },
   {
-    title: "Sustainable Practice",
+    number: "03",
+    title: "Environmental Responsibility",
     description:
-      "We're committed to environmental responsibility, working with manufacturers who prioritize recycled content and sustainable production.",
+      "Our materials are manufactured from recycled content using sustainable production processes.",
   },
   {
-    title: "Expert Support",
+    number: "04",
+    title: "Technical Excellence",
     description:
-      "From specification to installation, our team provides comprehensive technical support throughout your project.",
+      "From specification to installation, we provide comprehensive support throughout your project.",
   },
 ];
 
@@ -31,63 +35,68 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-secondary">
+      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-secondary">
         <div className="container-wide">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="label-uppercase mb-4"
+            className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
           >
-            About Us
+            About Isla
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-display max-w-3xl mb-6"
+            className="font-serif text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] max-w-4xl mb-8"
           >
-            Defining outdoor luxury
+            Materials for
+            <br />
+            <span className="italic">enduring architecture</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-large max-w-2xl"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
           >
-            Isla Wood Composite is a premium supplier of composite cladding and
-            decking materials for luxury architectural projects.
+            Isla Wood Composite is a materials partner for architects and developers 
+            creating coastal architecture of lasting significance.
           </motion.p>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="section-padding">
+      {/* Philosophy Section */}
+      <section className="py-28 md:py-40">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="heading-subsection mb-6">Our Story</h2>
-              <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
+              <p className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6">
+                Material Philosophy
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight leading-[1.2] mb-8">
+                We believe architecture should outlast the seasons
+              </h2>
+              <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
                 <p>
-                  Founded with a passion for exceptional outdoor spaces, Isla
-                  Wood Composite was born from the understanding that island and
-                  coastal architecture demands materials of uncompromising
-                  quality.
+                  Island and coastal architecture exists in tension with its environment. 
+                  Salt air, intense sunlight, and seasonal storms demand materials that 
+                  perform as beautifully in their tenth year as their first.
                 </p>
                 <p>
-                  We work exclusively with leading composite manufacturers to
-                  bring architects, developers, and discerning homeowners
-                  materials that combine the warmth of natural wood with the
-                  durability required for Mediterranean and coastal climates.
+                  We partner with leading composite manufacturers to provide surfaces 
+                  that combine the warmth of natural timber with engineering that 
+                  understands coastal conditions.
                 </p>
                 <p>
-                  From Ibiza to Dubai, our materials grace some of the most
-                  prestigious residential and hospitality projects in the world's
+                  From Ibiza to Dubai, our materials define some of the most 
+                  significant residential and hospitality projects in the world's 
                   most sought-after locations.
                 </p>
               </div>
@@ -101,51 +110,54 @@ const About = () => {
             >
               <img
                 src={projectTerrace}
-                alt="Luxury terrace with composite decking"
-                className="w-full aspect-[4/3] object-cover"
+                alt="Architectural terrace with Isla composite surfaces"
+                className="w-full aspect-[4/5] object-cover"
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="section-padding bg-warm">
+      {/* Principles */}
+      <section className="py-28 md:py-40 bg-warm">
         <div className="container-wide">
-          <div className="text-center mb-16">
+          <div className="max-w-xl mb-16">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="label-uppercase mb-4"
+              className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
             >
-              Our Values
+              Our Principles
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-section"
+              className="font-serif text-3xl md:text-4xl font-light tracking-tight"
             >
-              What drives us
+              What guides us
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {principles.map((principle, index) => (
               <motion.div
-                key={value.title}
+                key={principle.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-background p-8 border border-border/50"
+                className="border-t border-border pt-8"
               >
-                <h3 className="font-serif text-xl mb-3">{value.title}</h3>
+                <span className="text-xs font-light tracking-[0.2em] text-accent mb-4 block">
+                  {principle.number}
+                </span>
+                <h3 className="font-serif text-xl mb-3">{principle.title}</h3>
                 <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                  {value.description}
+                  {principle.description}
                 </p>
               </motion.div>
             ))}
@@ -154,38 +166,39 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="py-28 md:py-40 bg-primary text-primary-foreground">
         <div className="container-wide text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="heading-section mb-6"
+            className="font-serif text-4xl md:text-5xl font-light tracking-tight mb-8"
           >
-            Let's work together
+            Let's discuss your project
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="body-large text-primary-foreground/70 max-w-xl mx-auto mb-8"
+            className="text-lg font-light text-primary-foreground/60 max-w-xl mx-auto mb-10"
           >
-            Whether you're planning a new build or a renovation, we're here to
-            help you achieve the perfect finish.
+            Whether you're specifying materials for a new build or renovation, 
+            we're here to support your vision.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               to="/contact"
-              className="bg-accent text-accent-foreground px-8 py-4 text-sm font-medium tracking-wide uppercase hover:bg-accent/90 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              className="bg-accent text-accent-foreground px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-accent/90 transition-all duration-300 inline-flex items-center justify-center gap-3"
             >
-              Get in Touch
+              Start a Conversation
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

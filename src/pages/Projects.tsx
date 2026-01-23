@@ -11,41 +11,45 @@ const projects = [
     id: 1,
     title: "Villa Serena",
     location: "Ibiza, Spain",
-    category: "Residential",
+    category: "Private Residence",
+    application: "Facade & Terrace",
     description:
-      "A contemporary villa featuring our premium decking throughout the outdoor living spaces.",
+      "A contemporary villa where our composite cladding and decking define the architectural language of indoor-outdoor living.",
     image: projectTerrace,
-    year: 2024,
+    year: "2024",
   },
   {
     id: 2,
     title: "The Olive House",
     location: "Mallorca, Spain",
-    category: "Residential",
+    category: "Private Residence",
+    application: "Exterior Cladding",
     description:
-      "Modern cladding system transforming this Mediterranean estate into an architectural landmark.",
+      "Modern facade system transforming this Mediterranean estate into an architectural landmark of restrained elegance.",
     image: projectFacade,
-    year: 2024,
+    year: "2024",
   },
   {
     id: 3,
     title: "Azure Resort",
     location: "Mykonos, Greece",
     category: "Hospitality",
+    application: "Pool Surrounds",
     description:
-      "Luxury resort pool deck designed to withstand high traffic while maintaining premium aesthetics.",
+      "Luxury resort pool deck designed for high traffic while maintaining the premium aesthetic expected by discerning guests.",
     image: projectPool,
-    year: 2023,
+    year: "2023",
   },
   {
     id: 4,
     title: "Palm Residence",
     location: "Dubai, UAE",
-    category: "Residential",
+    category: "Private Residence",
+    application: "Complete Exterior",
     description:
-      "Exclusive waterfront property with composite cladding and decking throughout.",
+      "Waterfront property featuring comprehensive composite cladding and decking throughout all outdoor spaces.",
     image: heroVilla,
-    year: 2023,
+    year: "2023",
   },
 ];
 
@@ -53,71 +57,74 @@ const Projects = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-secondary">
+      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-secondary">
         <div className="container-wide">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="label-uppercase mb-4"
+            className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
           >
-            Our Portfolio
+            Projects
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-display max-w-3xl mb-6"
+            className="font-serif text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] max-w-4xl mb-8"
           >
-            Projects that inspire
+            Architecture
+            <br />
+            <span className="italic">in context</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-large max-w-2xl"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
           >
-            Explore our portfolio of luxury residential and commercial projects
-            across the Mediterranean and beyond.
+            A selection of residential and hospitality projects where our materials 
+            contribute to architecture of lasting significance.
           </motion.p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="section-padding">
+      <section className="py-28 md:py-40">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 lg:gap-x-12 lg:gap-y-28">
             {projects.map((project, index) => (
               <motion.article
                 key={project.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.7, delay: index * 0.1 }}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden mb-6">
+                <div className="relative overflow-hidden mb-8">
                   <img
                     src={project.image}
-                    alt={project.title}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+                    alt={`${project.title} - ${project.application}`}
+                    className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-white text-sm font-light">
-                      {project.description}
-                    </p>
-                  </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                 </div>
-                <div className="flex items-center justify-between mb-2">
-                  <p className="label-uppercase text-xs">{project.category}</p>
-                  <span className="text-xs text-muted-foreground">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-[11px] font-light tracking-[0.2em] uppercase text-muted-foreground">
+                    {project.application}
+                  </span>
+                  <span className="text-muted-foreground/40">—</span>
+                  <span className="text-[11px] font-light text-muted-foreground">
                     {project.year}
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm font-light">
+                <h3 className="font-serif text-2xl mb-2">{project.title}</h3>
+                <p className="text-muted-foreground text-sm font-light mb-4">
                   {project.location}
+                </p>
+                <p className="text-muted-foreground/80 text-sm font-light leading-relaxed">
+                  {project.description}
                 </p>
               </motion.article>
             ))}
@@ -126,26 +133,28 @@ const Projects = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-warm">
+      <section className="py-28 md:py-40 bg-warm">
         <div className="container-wide text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="heading-section mb-6"
+            className="font-serif text-4xl md:text-5xl font-light tracking-tight mb-8"
           >
-            Have a project in mind?
+            Considering our materials
+            <br />
+            for your project?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="body-large max-w-xl mx-auto mb-8"
+            className="text-lg font-light text-muted-foreground max-w-xl mx-auto mb-10"
           >
-            We work with architects, developers, and private clients to bring
-            their vision to life.
+            We collaborate with architects, developers, and discerning clients 
+            to specify surfaces that elevate their vision.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +162,10 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link to="/contact" className="btn-primary">
+            <Link 
+              to="/contact" 
+              className="bg-primary text-primary-foreground px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-primary/90 transition-all duration-300 inline-flex items-center justify-center"
+            >
               Start a Conversation
             </Link>
           </motion.div>

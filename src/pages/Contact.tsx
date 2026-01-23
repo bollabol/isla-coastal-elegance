@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -10,7 +10,7 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
-    phone: "",
+    role: "",
     subject: "",
     message: "",
   });
@@ -26,7 +26,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
@@ -38,7 +37,7 @@ const Contact = () => {
       name: "",
       email: "",
       company: "",
-      phone: "",
+      role: "",
       subject: "",
       message: "",
     });
@@ -48,58 +47,56 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-secondary">
+      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-secondary">
         <div className="container-wide">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="label-uppercase mb-4"
+            className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
           >
-            Contact
+            Contact & Partnerships
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-display max-w-3xl mb-6"
+            className="font-serif text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] max-w-4xl mb-8"
           >
-            Let's discuss your project
+            Let's discuss
+            <br />
+            <span className="italic">your project</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-large max-w-2xl"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
           >
-            Whether you need a quote, technical specifications, or expert advice,
-            our team is here to help.
+            Whether you're specifying materials, developing a property, or exploring 
+            a partnership, we're here to support your vision.
           </motion.p>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="section-padding">
+      <section className="py-28 md:py-40">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-1"
+              className="lg:col-span-4"
             >
-              <h2 className="heading-subsection mb-8">Get in Touch</h2>
-
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Office</h3>
-                    <p className="text-muted-foreground text-sm font-light">
+              <div className="space-y-12">
+                <div>
+                  <h3 className="font-serif text-xl mb-4">Studio</h3>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                    <p className="text-muted-foreground text-sm font-light leading-relaxed">
                       Carrer de Sant Miquel, 12
                       <br />
                       07800 Ibiza, Spain
@@ -107,48 +104,39 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Phone</h3>
-                    <p className="text-muted-foreground text-sm font-light">
-                      +34 600 000 000
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Email</h3>
-                    <p className="text-muted-foreground text-sm font-light">
-                      info@islawoodcomposite.com
-                    </p>
+                <div>
+                  <h3 className="font-serif text-xl mb-4">Email</h3>
+                  <div className="flex items-start gap-4">
+                    <Mail className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                    <a
+                      href="mailto:studio@islawoodcomposite.com"
+                      className="text-muted-foreground text-sm font-light hover:text-foreground transition-colors inline-flex items-center gap-2"
+                    >
+                      studio@islawoodcomposite.com
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
                   </div>
                 </div>
 
-                <div className="pt-4">
-                  <a
-                    href="https://wa.me/34600000000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-6 py-3 bg-[#25D366] text-white text-sm font-medium hover:bg-[#25D366]/90 transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    Chat on WhatsApp
-                  </a>
+                <div className="pt-8 border-t border-border">
+                  <h3 className="font-serif text-xl mb-4">Regions</h3>
+                  <p className="text-muted-foreground text-sm font-light leading-relaxed">
+                    We supply projects throughout Europe, the Mediterranean, 
+                    and the Middle East.
+                  </p>
+                  <p className="text-xs font-light tracking-wide text-muted-foreground/70 mt-4">
+                    Ibiza · Mallorca · Mykonos · Algarve · Dubai
+                  </p>
                 </div>
-              </div>
 
-              <div className="mt-12 pt-8 border-t border-border">
-                <h3 className="font-medium mb-4">We Serve</h3>
-                <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                  Ibiza · Mallorca · Mykonos · Dubai · Mediterranean Region
-                </p>
+                <div className="pt-8 border-t border-border">
+                  <h3 className="font-serif text-xl mb-4">Partnerships</h3>
+                  <p className="text-muted-foreground text-sm font-light leading-relaxed">
+                    We work with architects, developers, and contractors who 
+                    share our commitment to quality. Contact us to discuss 
+                    trade accounts and project partnerships.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -158,15 +146,17 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-2"
+              className="lg:col-span-8"
             >
-              <div className="bg-secondary p-8 md:p-12">
-                <h2 className="heading-subsection mb-8">Send a Message</h2>
+              <div className="bg-secondary p-10 md:p-14">
+                <h2 className="font-serif text-3xl font-light tracking-tight mb-8">
+                  Send a message
+                </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-xs font-medium tracking-wide uppercase mb-3">
                         Full Name *
                       </label>
                       <input
@@ -175,11 +165,11 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-xs font-medium tracking-wide uppercase mb-3">
                         Email *
                       </label>
                       <input
@@ -188,40 +178,47 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Company
+                      <label className="block text-xs font-medium tracking-wide uppercase mb-3">
+                        Company / Studio
                       </label>
                       <input
                         type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Phone
+                      <label className="block text-xs font-medium tracking-wide uppercase mb-3">
+                        Role
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
+                      <select
+                        name="role"
+                        value={formData.role}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors"
-                      />
+                        className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors text-sm"
+                      >
+                        <option value="">Select...</option>
+                        <option value="architect">Architect</option>
+                        <option value="developer">Developer</option>
+                        <option value="contractor">Contractor</option>
+                        <option value="designer">Designer</option>
+                        <option value="owner">Property Owner</option>
+                        <option value="other">Other</option>
+                      </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-xs font-medium tracking-wide uppercase mb-3">
                       Subject *
                     </label>
                     <select
@@ -229,19 +226,19 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors"
+                      className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors text-sm"
                     >
                       <option value="">Select a topic...</option>
-                      <option value="quote">Request a Quote</option>
-                      <option value="samples">Request Samples</option>
-                      <option value="technical">Technical Inquiry</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="other">Other</option>
+                      <option value="project">Project Inquiry</option>
+                      <option value="specification">Material Specification</option>
+                      <option value="samples">Sample Request</option>
+                      <option value="partnership">Trade Partnership</option>
+                      <option value="other">General Inquiry</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-xs font-medium tracking-wide uppercase mb-3">
                       Message *
                     </label>
                     <textarea
@@ -250,22 +247,22 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      placeholder="Tell us about your project..."
-                      className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors resize-none"
+                      placeholder="Tell us about your project or inquiry..."
+                      className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:border-accent transition-colors resize-none text-sm"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary inline-flex items-center justify-center gap-2"
+                    className="bg-primary text-primary-foreground px-10 py-5 text-xs font-medium tracking-[0.15em] uppercase hover:bg-primary/90 transition-all duration-300 inline-flex items-center justify-center gap-3"
                   >
                     {isSubmitting ? (
                       "Sending..."
                     ) : (
                       <>
-                        <Send className="w-4 h-4" />
                         Send Message
+                        <Send className="w-4 h-4" />
                       </>
                     )}
                   </button>

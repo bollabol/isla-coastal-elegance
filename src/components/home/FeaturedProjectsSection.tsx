@@ -9,46 +9,46 @@ const projects = [
   {
     title: "Villa Serena",
     location: "Ibiza, Spain",
-    category: "Decking",
+    application: "Facade & Terrace",
     image: projectTerrace,
   },
   {
     title: "The Olive House",
     location: "Mallorca, Spain",
-    category: "Cladding",
+    application: "Exterior Cladding",
     image: projectFacade,
   },
   {
     title: "Azure Resort",
     location: "Mykonos, Greece",
-    category: "Pool Deck",
+    application: "Pool Surrounds",
     image: projectPool,
   },
 ];
 
 export const FeaturedProjectsSection = () => {
   return (
-    <section className="section-padding">
+    <section className="py-28 md:py-40 bg-secondary">
       <div className="container-wide">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
-          <div>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16 lg:mb-20">
+          <div className="max-w-xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="label-uppercase mb-4"
+              className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
             >
-              Featured Work
+              Selected Work
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-section"
+              className="font-serif text-4xl md:text-5xl font-light tracking-tight leading-[1.15]"
             >
-              Selected projects
+              Architecture in context
             </motion.h2>
           </div>
           <motion.div
@@ -59,33 +59,35 @@ export const FeaturedProjectsSection = () => {
           >
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+              className="inline-flex items-center gap-3 text-sm font-light text-foreground hover:text-accent transition-colors group"
             >
               View all projects
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden mb-4">
+              <div className="relative overflow-hidden mb-6">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - ${project.application}`}
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
               </div>
-              <p className="label-uppercase text-xs mb-2">{project.category}</p>
+              <p className="text-[11px] font-light tracking-[0.2em] uppercase text-muted-foreground mb-2">
+                {project.application}
+              </p>
               <h3 className="font-serif text-xl mb-1">{project.title}</h3>
               <p className="text-muted-foreground text-sm font-light">
                 {project.location}
