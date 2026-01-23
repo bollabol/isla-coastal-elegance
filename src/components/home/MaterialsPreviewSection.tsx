@@ -41,7 +41,7 @@ export const MaterialsPreviewSection = () => {
               className="w-full aspect-[4/5] object-cover"
             />
             <div className="absolute -bottom-8 -right-8 bg-accent text-accent-foreground p-8 hidden lg:block">
-              <p className="font-serif text-3xl mb-1">25+</p>
+              <p className="font-serif text-3xl mb-1">15</p>
               <p className="text-xs font-light tracking-wide uppercase text-accent-foreground/80">
                 Year Warranty
               </p>
