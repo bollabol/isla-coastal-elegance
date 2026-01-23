@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Palette, Ruler, Wrench } from "lucide-react";
 import textureDecking from "@/assets/texture-decking.jpg";
 
 const applications = [
@@ -19,6 +19,24 @@ const applications = [
   {
     title: "Outdoor Living",
     description: "Pergolas, screens, and bespoke elements designed for coastal longevity.",
+  },
+];
+
+const customFeatures = [
+  {
+    icon: Palette,
+    title: "Custom Colours",
+    description: "Tailored finishes to match your architectural vision.",
+  },
+  {
+    icon: Ruler,
+    title: "Bespoke Dimensions",
+    description: "Custom profiles and lengths for unique requirements.",
+  },
+  {
+    icon: Wrench,
+    title: "Made-to-Order",
+    description: "Project-specific solutions for demanding designs.",
   },
 ];
 
@@ -88,11 +106,35 @@ export const MaterialsPreviewSection = () => {
               ))}
             </div>
 
+            {/* Custom Solutions Highlight */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-warm p-8 mb-10"
+            >
+              <h3 className="font-serif text-xl mb-6">Maatwerk & Custom Solutions</h3>
+              <div className="grid grid-cols-3 gap-6">
+                {customFeatures.map((feature, index) => (
+                  <div key={feature.title} className="text-center">
+                    <feature.icon className="w-6 h-6 mx-auto mb-3 text-accent" />
+                    <p className="text-xs font-medium tracking-wide uppercase mb-1">
+                      {feature.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground font-light hidden sm:block">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
             <Link
               to="/materials"
               className="inline-flex items-center gap-3 text-sm font-light text-foreground hover:text-accent transition-colors group"
             >
-              Explore materials
+              Explore materials & custom options
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

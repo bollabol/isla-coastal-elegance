@@ -9,17 +9,17 @@ const sampleSets = [
   {
     id: "facade",
     name: "Facade Collection",
-    description: "Cladding samples in all available finishes and profiles.",
+    description: "Cladding samples in all available finishes, colours and profiles.",
   },
   {
     id: "terrace",
     name: "Terrace Collection",
-    description: "Decking samples with texture and profile variations.",
+    description: "Decking samples with texture, colour and profile variations.",
   },
   {
     id: "complete",
     name: "Complete Collection",
-    description: "Comprehensive set including all materials and finishes.",
+    description: "Comprehensive set including all materials, finishes and custom colour options.",
   },
 ];
 
@@ -96,10 +96,18 @@ const Samples = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed mb-6"
           >
             We provide curated sample collections for architects, developers, and 
             design professionals evaluating materials for their projects.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-sm font-light text-accent max-w-2xl"
+          >
+            Custom colours and bespoke finishes available on request.
           </motion.p>
         </div>
       </section>
