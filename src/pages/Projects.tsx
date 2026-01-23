@@ -11,11 +11,6 @@ import deckingGrey from "@/assets/decking-grey.jpg";
 import deckingBrown from "@/assets/decking-brown.jpg";
 import claddingBlack from "@/assets/cladding-black.jpg";
 import claddingLightTeak from "@/assets/cladding-light-teak.jpg";
-import villaTeakOceanview from "@/assets/villa-teak-oceanview.jpg";
-import villaWalnutMediterranean from "@/assets/villa-walnut-mediterranean.jpg";
-import villaOakTerrace from "@/assets/villa-oak-terrace.jpg";
-import villaBlackModern from "@/assets/villa-black-modern.jpg";
-import villaHoneyTeakCourtyard from "@/assets/villa-honey-teak-courtyard.jpg";
 
 const projects = [
   {
@@ -127,61 +122,6 @@ const projects = [
       "Elegant Balearic villa with warm honey-blonde composite cladding, harmonizing with the natural stone and olive groves.",
     image: claddingLightTeak,
     year: "2024",
-  },
-  {
-    id: 11,
-    title: "Villa Tropicana",
-    location: "Sint Maarten, Caribbean",
-    category: "Private Residence",
-    application: "Teak Cladding",
-    description:
-      "Luxe Caribische villa met warme teak houtcomposiet bekleding, oceaanzicht terras met palmbomen en bougainville in gouden uur verlichting.",
-    image: villaTeakOceanview,
-    year: "2025",
-  },
-  {
-    id: 12,
-    title: "Villa Mediterranea",
-    location: "Mallorca, Spain",
-    category: "Private Residence",
-    application: "Walnut Cladding",
-    description:
-      "Eigentijdse Mediterrane villa met rijke donkere walnut houtcomposiet bekleding, infinity pool en witte stenen accenten op een kustklif.",
-    image: villaWalnutMediterranean,
-    year: "2025",
-  },
-  {
-    id: 13,
-    title: "Casa Riviera",
-    location: "Côte d'Azur, France",
-    category: "Private Residence",
-    application: "Oak Decking & Cladding",
-    description:
-      "Elegante villa met lichte natuurlijke eiken composiet vlonders en gevel, minimalistisch ontwerp met panoramisch zeezicht en weelderige tuinen.",
-    image: villaOakTerrace,
-    year: "2025",
-  },
-  {
-    id: 14,
-    title: "Villa Eclipse",
-    location: "Curaçao, Caribbean",
-    category: "Private Residence",
-    application: "Black Cladding",
-    description:
-      "Dramatische moderne villa met strakke zwarte houtcomposiet bekleding, geometrische architectuur en sfeervolle verlichting bij schemering.",
-    image: villaBlackModern,
-    year: "2025",
-  },
-  {
-    id: 15,
-    title: "Finca Lavanda",
-    location: "Formentera, Spain",
-    category: "Private Residence",
-    application: "Honey Teak Cladding",
-    description:
-      "Balearische finca met honing-blonde teak composiet bekleding, binnenplaats met waterpartij, witgekalkte muren en Mediterrane lavendel tuinen.",
-    image: villaHoneyTeakCourtyard,
-    year: "2025",
   },
 ];
 
