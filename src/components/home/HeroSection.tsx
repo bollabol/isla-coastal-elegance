@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Architectural facade with premium composite cladding"
+          alt="Luxury coastal villa with premium composite cladding"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
@@ -25,7 +25,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xs font-light tracking-[0.3em] uppercase text-white/60 mb-8"
           >
-            Premium Composite Surfaces
+            Engineered for Island Climates
           </motion.p>
 
           <motion.h1
@@ -34,9 +34,9 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[1.05] tracking-tight mb-8"
           >
-            Designed for islands.
+            Built to endure
             <br />
-            <span className="italic text-white/90">Built to last.</span>
+            <span className="italic text-white/90">sun, salt and sea.</span>
           </motion.h1>
 
           <motion.p
@@ -45,8 +45,9 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl font-light text-white/70 mb-12 max-w-xl leading-relaxed"
           >
-            Premium composite surfaces for architects and developers 
-            creating enduring coastal architecture.
+            Premium composite surfaces engineered for the unique demands of 
+            island and coastal architecture—where intense UV, salt air, and 
+            humidity test every material.
           </motion.p>
 
           <motion.div

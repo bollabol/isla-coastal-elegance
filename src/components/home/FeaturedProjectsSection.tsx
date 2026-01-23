@@ -10,25 +10,28 @@ const projects = [
     title: "Villa Serena",
     location: "Ibiza, Spain",
     application: "Facade & Terrace",
+    climate: "Mediterranean coastal",
     image: projectTerrace,
   },
   {
     title: "The Olive House",
     location: "Mallorca, Spain",
     application: "Exterior Cladding",
+    climate: "Island maritime",
     image: projectFacade,
   },
   {
     title: "Azure Resort",
     location: "Mykonos, Greece",
     application: "Pool Surrounds",
+    climate: "Aegean island",
     image: projectPool,
   },
 ];
 
 export const FeaturedProjectsSection = () => {
   return (
-    <section className="py-28 md:py-40 bg-secondary">
+    <section className="py-28 md:py-40 bg-background">
       <div className="container-wide">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16 lg:mb-20">
           <div className="max-w-xl">
@@ -39,7 +42,7 @@ export const FeaturedProjectsSection = () => {
               transition={{ duration: 0.6 }}
               className="text-xs font-light tracking-[0.3em] uppercase text-muted-foreground mb-6"
             >
-              Selected Work
+              Selected Projects
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +51,9 @@ export const FeaturedProjectsSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-serif text-4xl md:text-5xl font-light tracking-tight leading-[1.15]"
             >
-              Architecture in context
+              Proven performance
+              <br />
+              <span className="italic">across island climates</span>
             </motion.h2>
           </div>
           <motion.div
@@ -80,14 +85,20 @@ export const FeaturedProjectsSection = () => {
               <div className="relative overflow-hidden mb-6">
                 <img
                   src={project.image}
-                  alt={`${project.title} - ${project.application}`}
+                  alt={`${project.title} - ${project.application} in ${project.climate} climate`}
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
               </div>
-              <p className="text-[11px] font-light tracking-[0.2em] uppercase text-muted-foreground mb-2">
-                {project.application}
-              </p>
+              <div className="flex items-center gap-3 mb-2">
+                <p className="text-[11px] font-light tracking-[0.2em] uppercase text-muted-foreground">
+                  {project.application}
+                </p>
+                <span className="text-muted-foreground/30">·</span>
+                <p className="text-[11px] font-light text-accent">
+                  {project.climate}
+                </p>
+              </div>
               <h3 className="font-serif text-xl mb-1">{project.title}</h3>
               <p className="text-muted-foreground text-sm font-light">
                 {project.location}
