@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import textureDecking from "@/assets/texture-decking.jpg";
+import sampleCollection from "@/assets/sample-collection.jpg";
 
 const sampleSets = [
   {
@@ -146,9 +146,9 @@ const Samples = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src={textureDecking}
-                alt="Sample collection presentation"
-                className="w-full aspect-[4/5] object-cover mb-10"
+                src={sampleCollection}
+                alt="Isla Wood Composite sample collection"
+                className="w-full aspect-video object-contain bg-white mb-10"
               />
               <div className="space-y-6">
                 <div>
