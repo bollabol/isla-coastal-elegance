@@ -64,34 +64,6 @@ const architecturalSystems = [
     ],
     image: textureDecking,
   },
-  {
-    id: "fencing",
-    name: "Fencing Systems",
-    subtitle: "Boundary Architecture",
-    description:
-      "Premium composite fencing that defines property boundaries with architectural coherence. Privacy, security, and aesthetic refinement unified in systems designed for luxury estates and resorts.",
-    features: [
-      "Privacy-optimized panel designs",
-      "Structural post systems",
-      "Integrated gate compatibility",
-      "Wind-load certified",
-    ],
-    image: projectFacade,
-  },
-  {
-    id: "gates",
-    name: "Electric Gates",
-    subtitle: "Automated Elegance",
-    description:
-      "Seamlessly integrated electric and automated gates combining composite aesthetics with modern automation. Security and comfort unified with architectural consistency.",
-    features: [
-      "Smart home integration ready",
-      "Composite panel systems",
-      "Premium automation hardware",
-      "Matching fencing aesthetics",
-    ],
-    image: projectTerrace,
-  },
 ];
 
 const materialQualities = [
@@ -156,7 +128,7 @@ const Materials = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted-foreground font-light text-lg leading-relaxed max-w-2xl"
           >
-            From facade cladding to automated gates, our comprehensive material systems 
+            From facade cladding to pool surrounds, our comprehensive material systems 
             provide architects and developers with complete solutions for luxury coastal 
             architecture. Every surface engineered for decades of performance.
           </motion.p>
@@ -348,7 +320,7 @@ const Materials = () => {
                 <div className="border-l-2 border-accent pl-5">
                   <h4 className="font-serif text-lg mb-1">Project-Specific Systems</h4>
                   <p className="text-muted-foreground text-sm font-light">
-                    Integrated solutions for facades, louvres, fencing, and gates designed as one.
+                    Integrated solutions for facades, terraces, and louvres designed as one.
                   </p>
                 </div>
               </div>
