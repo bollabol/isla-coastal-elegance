@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import projectTerrace from "@/assets/project-terrace.jpg";
 import heroVilla from "@/assets/hero-villa.jpg";
+import claddingGreyVertical from "@/assets/cladding-grey-vertical.jpg";
+import textureDecking from "@/assets/texture-decking.jpg";
 
 const whyChooseUs = [
   {
@@ -92,8 +94,8 @@ const principles = [
 const About = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-secondary">
+      {/* Hero with Image */}
+      <section className="pt-40 pb-0 md:pt-52 md:pb-0 bg-secondary">
         <div className="container-wide">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -117,12 +119,24 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl font-light text-muted-foreground max-w-2xl leading-relaxed mb-12"
           >
             Isla Wood Composite is a materials partner for architects and developers 
             creating coastal architecture of lasting significance.
           </motion.p>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full"
+        >
+          <img
+            src={claddingGreyVertical}
+            alt="Grey vertical composite cladding"
+            className="w-full h-[40vh] md:h-[50vh] object-cover"
+          />
+        </motion.div>
       </section>
 
       {/* Stats Bar */}
@@ -317,8 +331,8 @@ const About = () => {
       {/* Visual Break */}
       <section className="relative h-[50vh] min-h-[400px]">
         <img
-          src={heroVilla}
-          alt="Luxury coastal villa with Isla Wood Composite materials"
+          src={textureDecking}
+          alt="Teak vertical composite cladding - Isla Wood Composite"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-primary/40" />
