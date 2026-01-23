@@ -9,6 +9,8 @@ import deckingTeak from "@/assets/decking-teak.jpg";
 import deckingSand from "@/assets/decking-sand.jpg";
 import deckingGrey from "@/assets/decking-grey.jpg";
 import deckingBrown from "@/assets/decking-brown.jpg";
+import fenceMediterranean from "@/assets/fence-villa-mediterranean.jpg";
+import fenceModern from "@/assets/fence-villa-modern.jpg";
 
 const projects = [
   {
@@ -97,6 +99,28 @@ const projects = [
     description:
       "Warm garden terrace featuring rich brown composite decking surrounded by tropical plants and mature trees.",
     image: deckingBrown,
+    year: "2024",
+  },
+  {
+    id: 9,
+    title: "Villa Oliva",
+    location: "Ibiza, Spain",
+    category: "Private Residence",
+    application: "Teak Fencing",
+    description:
+      "Mediterranean estate enclosed by elegant teak composite privacy fencing, creating an exclusive sanctuary with olive grove and infinity pool.",
+    image: fenceMediterranean,
+    year: "2024",
+  },
+  {
+    id: 10,
+    title: "Coastal Edge",
+    location: "Malibu, USA",
+    category: "Private Residence",
+    application: "Anthracite Fencing",
+    description:
+      "Contemporary oceanfront villa with sleek anthracite grey composite fencing, providing privacy while maintaining architectural coherence.",
+    image: fenceModern,
     year: "2024",
   },
 ];
