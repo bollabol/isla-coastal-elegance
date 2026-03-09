@@ -109,10 +109,10 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <Mail className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                     <a
-                      href="mailto:studio@islawoodcomposite.com"
+                      href="mailto:info@isla-woodcomposite.com"
                       className="text-muted-foreground text-sm font-light hover:text-foreground transition-colors inline-flex items-center gap-2"
                     >
-                      studio@islawoodcomposite.com
+                      info@isla-woodcomposite.com
                       <ArrowUpRight className="w-3 h-3" />
                     </a>
                   </div>

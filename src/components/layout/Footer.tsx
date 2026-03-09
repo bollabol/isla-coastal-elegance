@@ -92,10 +92,10 @@ export const Footer = () => {
                 Ibiza · Mallorca · Mykonos · Algarve · Dubai
               </span>
               <a
-                href="mailto:studio@islawoodcomposite.com"
+                href="mailto:info@isla-woodcomposite.com"
                 className="inline-flex items-center gap-2 text-xs font-light text-primary-foreground/70 hover:text-primary-foreground transition-colors"
               >
-                studio@islawoodcomposite.com
+                info@isla-woodcomposite.com
                 <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
