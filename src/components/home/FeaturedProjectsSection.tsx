@@ -97,9 +97,6 @@ export const FeaturedProjectsSection = () => {
                 </p>
               </div>
               <h3 className="font-serif text-xl mb-1">{project.title}</h3>
-              <p className="text-muted-foreground text-sm font-light">
-                {project.location}
-              </p>
             </motion.article>
           ))}
         </div>
