@@ -16,7 +16,7 @@ const projects = [
   {
     id: 1,
     title: "Villa Horizon",
-    location: "Curaçao, Caribbean",
+    location: "",
     category: "Private Residence",
     application: "Facade & Terrace",
     description:
