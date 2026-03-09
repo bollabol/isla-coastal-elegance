@@ -26,22 +26,44 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch(
+        `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      );
 
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your inquiry. We'll respond within 24 hours.",
-    });
+      const data = await response.json();
 
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      role: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your inquiry. We'll respond within 24 hours.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        role: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
