@@ -47,15 +47,23 @@ const Contact = () => {
         description: "Thank you for your inquiry. We'll respond within 24 hours.",
       });
 
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      role: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        role: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
