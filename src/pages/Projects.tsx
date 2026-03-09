@@ -16,7 +16,6 @@ const projects = [
   {
     id: 1,
     title: "Villa Horizon",
-    location: "",
     category: "Private Residence",
     application: "Facade & Terrace",
     description:
@@ -27,7 +26,6 @@ const projects = [
   {
     id: 2,
     title: "Casa del Mar",
-    location: "Bonaire, Caribbean",
     category: "Private Residence",
     application: "Exterior Cladding",
     description:
@@ -38,7 +36,6 @@ const projects = [
   {
     id: 3,
     title: "Sunset Villa",
-    location: "Aruba, Caribbean",
     category: "Private Residence",
     application: "Complete Exterior",
     description:
@@ -49,7 +46,6 @@ const projects = [
   {
     id: 4,
     title: "Coral Bay Resort",
-    location: "St. Maarten, Caribbean",
     category: "Hospitality",
     application: "Pool Surrounds",
     description:
@@ -60,7 +56,6 @@ const projects = [
   {
     id: 5,
     title: "Mediterranean Terrace",
-    location: "Ibiza, Spain",
     category: "Private Residence",
     application: "Teak Decking",
     description:
@@ -71,7 +66,6 @@ const projects = [
   {
     id: 6,
     title: "Coastal Retreat",
-    location: "Mallorca, Spain",
     category: "Private Residence",
     application: "Sand Decking",
     description:
@@ -82,7 +76,6 @@ const projects = [
   {
     id: 7,
     title: "Urban Rooftop",
-    location: "Barcelona, Spain",
     category: "Private Residence",
     application: "Grey Decking",
     description:
@@ -93,7 +86,6 @@ const projects = [
   {
     id: 8,
     title: "Garden Oasis",
-    location: "Marbella, Spain",
     category: "Private Residence",
     application: "Brown Decking",
     description:
@@ -104,7 +96,6 @@ const projects = [
   {
     id: 9,
     title: "Villa Noir",
-    location: "Côte d'Azur, France",
     category: "Private Residence",
     application: "Black Cladding",
     description:
@@ -115,7 +106,6 @@ const projects = [
   {
     id: 10,
     title: "Casa Serena",
-    location: "Formentera, Spain",
     category: "Private Residence",
     application: "Light Teak Cladding",
     description:
