@@ -192,10 +192,7 @@ const Projects = () => {
                     {project.year}
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm font-light mb-4">
-                  {project.location}
-                </p>
+                <h3 className="font-serif text-2xl mb-4">{project.title}</h3>
                 <p className="text-muted-foreground/80 text-sm font-light leading-relaxed">
                   {project.description}
                 </p>
