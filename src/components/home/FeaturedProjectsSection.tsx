@@ -8,21 +8,18 @@ import projectPool from "@/assets/project-pool.jpg";
 const projects = [
   {
     title: "Villa Serena",
-    location: "Ibiza, Spain",
     application: "Facade & Terrace",
     climate: "Mediterranean coastal",
     image: projectTerrace,
   },
   {
     title: "The Olive House",
-    location: "Mallorca, Spain",
     application: "Exterior Cladding",
     climate: "Island maritime",
     image: projectFacade,
   },
   {
     title: "Azure Resort",
-    location: "Mykonos, Greece",
     application: "Pool Surrounds",
     climate: "Aegean island",
     image: projectPool,
@@ -100,9 +97,6 @@ export const FeaturedProjectsSection = () => {
                 </p>
               </div>
               <h3 className="font-serif text-xl mb-1">{project.title}</h3>
-              <p className="text-muted-foreground text-sm font-light">
-                {project.location}
-              </p>
             </motion.article>
           ))}
         </div>
